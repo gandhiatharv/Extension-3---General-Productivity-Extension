@@ -2,9 +2,9 @@
 
 let timer;
 let intervals = 8; // Number of Pomodoro intervals
-let workDuration = 50 * 60000; // 50 minutes in seconds
-let shortBreakDuration = 10 * 60000; // 10 minutes in seconds
-let longBreakDuration = 10 * 60000; // 10 minutes in seconds
+let workDuration = 50 * 60; // 50 minutes in seconds
+let shortBreakDuration = 10 * 60; // 10 minutes in seconds
+let longBreakDuration = 10 * 60; // 10 minutes in seconds
 let currentInterval = 0; // Start with the first work interval
 let pomodoroCount = 0; // Initialize the Pomodoro count
 let currentLongCount=0
