@@ -40,7 +40,7 @@ document.getElementById('pomodoroForm').addEventListener('submit', function (eve
   //playBackgroundMusic();
 
   // Open brain.fm focus page
-  window.open("https://my.brain.fm/focus");
+  window.open("https://my.brain.fm/player/QYN78dJrrzs5mD_TJgBcq");
 });
 
 chrome.runtime.onMessage.addListener(function (request, sender, sendResponse) {

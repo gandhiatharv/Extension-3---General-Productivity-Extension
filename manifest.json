@@ -2,7 +2,7 @@
     "manifest_version": 3,
     "name": "General Productivity",
     "version": "1.0",
-    "description": "Open sites at certain time, block sites, productivity motivational sweetalert notification, pomodoro timer, popup, and more",
+    "description": "Open sites at certain time, block sites, productivity motivational sweetalert notification, pomodoro timer, popup, skills/topics/subjects to learn list, overlays tabs during break, and more",
     "permissions": [
       "activeTab",
       "storage",
