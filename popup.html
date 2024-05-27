@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pomodoro Timer</title>
+  <style>
+    body {
+      width: 300px;
+      text-align: center;
+    }
+    input {
+      margin: 5px;
+    }
+  </style>
+</head>
+<body>
+  <h2 id="timer">25:00</h2>
+  <form id="pomodoroForm">
+    <fieldset>
+      <legend style="font-size: 18px;">
+        <input type="checkbox" id="category1"> 
+        Vohra work
+      </legend>
+      <label>
+        <input type="checkbox" id="category1sub1"> 
+        read the book
+      </label><br>
+      <label>
+        <input type="checkbox" id="category1sub2"> 
+        Subcategory
+      </label><br>
+      <label>
+        <input type="checkbox" id="category1sub3"> 
+        Subcategory
+      </label><br>
+      <label>
+        <input type="checkbox" id="category1sub4"> 
+        Subcategory
+      </label><br>
+    </fieldset>
+    
+    <fieldset>
+      <legend style="font-size: 18px;">
+        <input type="checkbox" id="category2"> 
+        debate work
+      </legend>
+      <label>
+        <input type="checkbox" id="category2sub1"> 
+        find those tabs from before
+      </label><br>
+      <label>
+        <input type="checkbox" id="category2sub2"> 
+        yesterday current tabs things to do
+      </label><br>
+      <label>
+        <input type="checkbox" id="category2sub3"> 
+        v2 ramaswm notes 2 notes apps, docs, tabs, papers
+      </label><br>
+      <label>
+        <input type="checkbox" id="category2sub4"> 
+        debate drills/speech redoes
+      </label><br>
+    </fieldset>
+  
+    <fieldset>
+      <legend style="font-size: 18px;">
+        <input type="checkbox" id="category3"> 
+        bass practice
+      </legend>
+      <label>
+        <input type="checkbox" id="category3sub1"> 
+        concerto
+      </label><br>
+      <label>
+        <input type="checkbox" id="category3sub2"> 
+        scales
+      </label><br>
+      <label>
+        <input type="checkbox" id="category3sub3"> 
+        Subcategory
+      </label><br>
+      <label>
+        <input type="checkbox" id="category3sub4"> 
+        Subcategory
+      </label><br>
+    </fieldset>
+  
+    <fieldset>
+      <legend style="font-size: 18px;">
+        <input type="checkbox" id="category4"> 
+        compsci
+      </legend>
+      <label>
+        <input type="checkbox" id="category4sub1"> 
+        review apt classes' content from 1 to current, blookets and quizlets
+      </label><br>
+      <label>
+        <input type="checkbox" id="category4sub2"> 
+        quizzes and projects on both accounts
+      </label><br>
+      <label>
+        <input type="checkbox" id="category4sub3"> 
+        revise content find system for revising things in pro class, like class summaries,notebook notes,things i remember, class recording, watch that class recording
+      </label><br>
+      <label>
+        <input type="checkbox" id="category4sub4"> 
+        make the CPT thing
+      </label><br>
+    </fieldset>
+  
+    <fieldset>
+      <legend style="font-size: 18px;">
+        <input type="checkbox" id="category5"> 
+        APs
+      </legend>
+      <label>
+        <input type="checkbox" id="category5sub1"> 
+        gpt to learn 3 euro units, use the videos and studyguides
+      </label><br>
+      <label>
+        <input type="checkbox" id="category5sub2"> 
+        geography units 4&5 with blookets
+      </label><br>
+      <label>
+        <input type="checkbox" id="category5sub3"> 
+        Subcategory
+      </label><br>
+      <label>
+        <input type="checkbox" id="category5sub4"> 
+        Subcategory
+      </label><br>
+    </fieldset>
+  
+    <fieldset>
+      <legend style="font-size: 18px;">
+        <input type="checkbox" id="category6"> 
+        Daily Rituals/Fun Stuff
+      </legend>
+      <label>
+        <input type="checkbox" id="category6sub1"> 
+        1-2 crash course video a day/or use the time for another 5 media source
+
+      </label><br>
+      <label>
+        <input type="checkbox" id="category6sub2"> 
+        4 hr skills - 1 per week
+
+      </label><br>
+      <label>
+        <input type="checkbox" id="category6sub3"> 
+        1 mode of compsci different doing every day in the week
+
+      </label><br>
+      <label>
+        <input type="checkbox" id="category6sub4"> 
+        Curiosities explorations/5 media sources/hist documentary/on own time learning time
+
+      </label><br>
+      <label>
+        <input type="checkbox" id="category6sub3"> 
+        1 book a week or textbook - 1 hr daily to read 350-420 pages a week + 4Ps, 50 minutes reading 10 mins summary video daily
+
+      </label><br>      <label>
+        <input type="checkbox" id="category6sub3"> 
+        1 shortform book a week
+
+      </label><br>      <label>
+        <input type="checkbox" id="category6sub3"> 
+        5 enrichment
+
+      </label><br>      <label>
+        <input type="checkbox" id="category6sub3"> 
+        1 video editing vid based on a 5 media source from the week
+
+      </label><br>
+      <label>
+        <input type="checkbox" id="category6sub4"> 
+        1 documentary at least per day/1-2 insane curiosity videos
+
+      </label><br>
+    </fieldset>
+  
+    <fieldset>
+      <legend style="font-size: 18px;">
+        <input type="checkbox" id="category7"> 
+        Category 7
+      </legend>
+      <label>
+        <input type="checkbox" id="category7sub1"> 
+        Subcategory
+      </label><br>
+      <label>
+        <input type="checkbox" id="category7sub2"> 
+        Subcategory
+      </label><br>
+      <label>
+        <input type="checkbox" id="category7sub3"> 
+        Subcategory
+      </label><br>
+      <label>
+        <input type="checkbox" id="category7sub4"> 
+        Subcategory
+      </label><br>
+    </fieldset>
+  
+    <fieldset>
+      <legend style="font-size: 18px;">
+        <input type="checkbox" id="category8"> 
+        Category 8
+      </legend>
+      <label>
+        <input type="checkbox" id="category8sub1"> 
+        Subcategory
+      </label><br>
+      <label>
+        <input type="checkbox" id="category8sub2"> 
+        Subcategory
+      </label><br>
+      <label>
+        <input type="checkbox" id="category8sub3"> 
+        Subcategory
+      </label><br>
+      <label>
+        <input type="checkbox" id="category8sub4"> 
+        Subcategory
+      </label><br>
+    </fieldset>
+  
+    <fieldset>
+      <legend style="font-size: 18px;">
+        <input type="checkbox" id="category9"> 
+        Category 9
+      </legend>
+      <label>
+        <input type="checkbox" id="category9sub1"> 
+        Subcategory
+      </label><br>
+      <label>
+        <input type="checkbox" id="category9sub2"> 
+        Subcategory
+      </label><br>
+      <label>
+        <input type="checkbox" id="category9sub3"> 
+        Subcategory
+      </label><br>
+      <label>
+        <input type="checkbox" id="category9sub4"> 
+        Subcategory
+      </label><br>
+    </fieldset>
+  
+    <fieldset>
+      <legend style="font-size: 18px;">
+        <input type="checkbox" id="category10"> 
+        Category 10
+      </legend>
+      <label>
+        <input type="checkbox" id="category10sub1"> 
+        Subcategory
+      </label><br>
+      <label>
+        <input type="checkbox" id="category10sub2"> 
+        Subcategory
+      </label><br>
+      <label>
+        <input type="checkbox" id="category10sub3"> 
+        Subcategory
+      </label><br>
+      <label>
+        <input type="checkbox" id="category10sub4"> 
+        Subcategory
+      </label><br>
+
+    </fieldset>
+    <br>
+    
+    <button type="submit">Start Pomodoro</button><br><br><br>
+    <label for="website1">Website 1:</label>
+    <input type="text" id="website1" placeholder="Enter URL for Pomodoro 1">
+    <label for="website2">Website 2:</label>
+    <input type="text" id="website2" placeholder="Enter URL for Pomodoro 2">
+    <label for="website3">Website 3:</label>
+    <input type="text" id="website3" placeholder="Enter URL for Pomodoro 3">
+    <label for="website4">Website 4:</label>
+    <input type="text" id="website4" placeholder="Enter URL for Pomodoro 4">
+    <label for="website5">Website 5:</label>
+    <input type="text" id="website5" placeholder="Enter URL for Pomodoro 5">
+    <label for="website6">Website 6:</label>
+    <input type="text" id="website6" placeholder="Enter URL for Pomodoro 6">
+    <label for="website7">Website 7:</label>
+    <input type="text" id="website7" placeholder="Enter URL for Pomodoro 7">
+    <label for="website8">Website 8:</label>
+    <input type="text" id="website8" placeholder="Enter URL for Pomodoro 8">
+  </form>
+  <!-- Audio for background music -->
+  <!--<audio id="bgMusic" src="music.m4a" loop></audio>-->
+  <script src="popup.js"></script>
+</body>
+</html>
+
+
+
+
