@@ -2,19 +2,19 @@
 
 let timer;
 let intervals = 8; // Number of Pomodoro intervals
-let workDuration = 50 * 60; // 50 minutes in seconds
-let shortBreakDuration = 10 * 60; // 10 minutes in seconds
-let longBreakDuration = 10 * 60; // 10 minutes in seconds
+let workDuration = 50*60; // 50 minutes in seconds
+let shortBreakDuration = 10*60; // 10 minutes in seconds
+let longBreakDuration = 10*60; // 10 minutes in seconds
 let currentInterval = 0; // Start with the first work interval
 let pomodoroCount = 0; // Initialize the Pomodoro count
 let currentLongCount=0
 let gamestate = 1
 let blockNumber = 0
 let hhhh =("H", "Bye", "Cry")
+let startupextension=1
  // Importing a named export from module1.js
 //import { allowedSites } from './content.js';
 
- 
 // main.js
 
 // Modify the variable declared in script1.js
@@ -70,11 +70,16 @@ function saveWebsitesToStorage(websites) {
 
 function startNextPomodoro(websites) {
   // window.open("https://my.brain.fm/focus");
- 
+
    let currentDuration;
    
    if (currentInterval % 2 === 0) {
-     gamestate=1
+    gamestate=1
+    if (startupextension==0){
+      chrome.sessions.restore();
+    } else{
+      startupextension=0
+    }
      // Work session
      currentDuration = workDuration;
      //console.log("hi")//chrome.tabs.create({ url: /* websites[Math.floor(currentInterval / 2) - 1] || */ 'https://www.google.com' });
@@ -231,6 +236,47 @@ function startNextPomodoro(websites) {
          currentDuration = shortBreakDuration;
        }
        
+/*
+       swal({ 
+        showCancelButton: true, cancelButtonColor:'#4CAF50', cancelButtonText: 'Yes',
+          background:'#FF6B6B',    title: `Achieved the Goal for this Work Session? Yes or No?`, text: "", 
+          type: 'info', confirmButtonColor:'#0047AB',
+           imageSize: "306x220", confirmButtonText: "No", },    function(isConfirm) {
+              if (isConfirm) {
+                var wbxyz=0;
+                  // Redirect to a different URL
+                  //window.location.href = "https://docs.google.com/document/d/1oD4sqKF9T7ozT6pgx9MO5dIFGEWkd4PsgAQ6b8ScemE/edit?usp=sharing";
+                  // Open a different URL in a new tab
+                  swal({ 
+                    showCancelButton: true, cancelButtonColor:'#4CAF50', cancelButtonText: 'Yes',
+                      background:'#FF6B6B',    title: `Nice!`, text: "Well then, start working on and enjoying some passions activities in the next session! Great job and enjoy!", 
+                      type: 'success', confirmButtonColor:'#0047AB',
+                       imageSize: "306x220", confirmButtonText: "No", },    function(isConfirm) {
+                          if (isConfirm) {
+                            var wbexyz=0;
+                              // Redirect to a different URL
+                              //window.location.href = "https://docs.google.com/document/d/1oD4sqKF9T7ozT6pgx9MO5dIFGEWkd4PsgAQ6b8ScemE/edit?usp=sharing";
+                              // Open a different URL in a new tab
+            
+                          }            
+                        });
+              } else{
+                swal({ 
+                  showCancelButton: true, cancelButtonColor:'#4CAF50', cancelButtonText: 'Yes',
+                    background:'#FF6B6B',    title: `Darn It`, text: "Pick up your head, and get back in the swing of doing work efficiently, sustainably, and productively. In the next work session, continue working on an alternate activity(s) productive working subject. Work hard!", 
+                    type: 'success', confirmButtonColor:'#0047AB',
+                     imageSize: "306x220", confirmButtonText: "No", },    function(isConfirm) {
+                        if (isConfirm) {
+                          var webexyz=0;
+                            // Redirect to a different URL
+                            //window.location.href = "https://docs.google.com/document/d/1oD4sqKF9T7ozT6pgx9MO5dIFGEWkd4PsgAQ6b8ScemE/edit?usp=sharing";
+                            // Open a different URL in a new tab
+          
+                        }            
+                      });
+              }            
+            });
+            */
  
  
      }
@@ -255,6 +301,7 @@ function startNextPomodoro(websites) {
          }
        }
      }, 1000);
+
    }
    
   function updateTimer(time) {
